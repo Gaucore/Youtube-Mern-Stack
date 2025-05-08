@@ -2,7 +2,7 @@ const http = require('http');
 const app = require('./app');
 const mongoose = require('mongoose');
 
-const server = http.createServer(app);
+const server = http.createServer(app);      
 const port = process.env.PORT || 4000;
 
 // Check MongoDB connection before starting the server
