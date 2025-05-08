@@ -8,6 +8,7 @@ const VideoRouter = require('./Routes/video.Route');
 const commentRouter=require('./Routes/comment.Route');
 const bodyParser=require('body-parser');
 const FileUpload=require('express-fileupload');
+const cors=require('cors');
 //Middleware
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true })); 
@@ -15,6 +16,7 @@ app.use(FileUpload({
     useTempFiles : true,
     // tempFileDir : '/tmp/'
 }));
+app.use(cors());
 
 
 app.get('/', (req, res) => {
